@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hotel
+  template:
+    metadata:
+      labels:
+        app: hotel
+    spec:
+      containers:
+      - name: hotel
+        image: siddhantchopra/hotel-k8-demo
+        ports:
+        - containerPort: 3003
+        env:
+        - name: MONGO_URI
+          value: mongodb+srv://siddhantchopra:siddhant17@cluster0.pyvptja.mongodb.net

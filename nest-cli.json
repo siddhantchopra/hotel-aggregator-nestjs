@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/hotel/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/hotel/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/hotel",
+  "projects": {
+    "hotel": {
+      "type": "application",
+      "root": "apps/hotel",
+      "entryFile": "main",
+      "sourceRoot": "apps/hotel/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/hotel/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    },
+    "booking": {
+      "type": "application",
+      "root": "apps/booking",
+      "entryFile": "main",
+      "sourceRoot": "apps/booking/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/booking/tsconfig.app.json"
+      }
+    }
+  }
+}

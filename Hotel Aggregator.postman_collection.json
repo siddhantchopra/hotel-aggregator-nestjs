@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "6883051b-0fbc-4a08-8aef-769aff9e3d8b",
+		"name": "Hotel Aggregator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "getLoggedInUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hel\",\r\n    \"phoneNo\": 789067234,\r\n    \"emailID\": \"hel@gmail.com\",\r\n    \"age\": 28,\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}",
+							"host": [
+								"{{baseUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hotels",
+			"item": [
+				{
+					"name": "addHotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hotels/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hotels",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hotelData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hotelData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHotelById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateHotelById",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotelAddress\": \"Ujjain Indore Road\",\r\n    \"location\": \"Ujjain\",\r\n    \"hotelName\": \"Rudraksh Resorts\",\r\n    \"rating\": 4,\r\n    \"phoneNo\": \"0294 243 0251\",\r\n    \"HotelAmenities\": [\r\n        \"Connecting Rooms\",\r\n        \"Free parking\",\r\n        \"Concierge\",\r\n        \"Executive lounge\",\r\n        \"On-site restaurant\",\r\n        \"Outdoor pool\",\r\n        \"Fitness center\"\r\n    ],\r\n    \"emailID\": \"info@rudraksh.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/hotel/64aaa7de89b6a592d56f81d9",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"hotel",
+								"64aaa7de89b6a592d56f81d9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteHotelById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hotelData/delete/64a1546f1e0409f795485c67",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hotelData",
+								"delete",
+								"64a1546f1e0409f795485c67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addimage",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "hotelByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hotelData/hotelbyName/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hotelData",
+								"hotelbyName",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
